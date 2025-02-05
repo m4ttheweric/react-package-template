@@ -31,6 +31,7 @@ const run = async () => {
   log('Formatting code...');
   execute(`bun run format:write`);
 
+  // if you have tests eventually, uncomment this to run them as part of the publish process
   // log('Testing code...');
   // execute(`bun run test`);
 

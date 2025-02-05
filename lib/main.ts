@@ -1,2 +1,2 @@
-export * from './useLoadingState';
 export * from './types';
+export * from './DemoCounter';

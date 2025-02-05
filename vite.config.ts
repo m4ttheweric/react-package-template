@@ -26,6 +26,7 @@ export default defineConfig({
     },
   ],
   define: {
+    // this allows the package version to be printed in in the code
     GLOBALS: {
       packageVersion: version,
     },
