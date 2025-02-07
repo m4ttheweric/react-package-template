@@ -22,3 +22,7 @@ This script will:
 6. Ask you to select if this is a patch, minor, or major version change. This will adjust your package.json accordingly and create a tag commit. ✅
 7. Run another build so the package version update is included in the published code ✅
 8. Attempt to run `npm publish` to publish your package! 🚀
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)

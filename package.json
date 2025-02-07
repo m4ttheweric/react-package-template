@@ -2,6 +2,7 @@
   "name": "@m4ttheweric/react-package-template",
   "private": false,
   "version": "0.0.1",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/main.cjs",
   "module": "./dist/main.mjs",
@@ -29,13 +30,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b ./tsconfig.lib.json && vite build",
+    "build:app": "tsc -b ./tsconfig.app.json && vite build --config vite.app.config.ts",
     "test": "vitest run",
     "lint": "eslint . --quiet",
     "format:write": "prettier --write \"**/*.{ts,tsx}\" --cache",
     "format:check": "prettier --check \"**/*.{ts,tsx}\" --cache",
     "preview": "vite preview",
     "type-check": "tsc --noEmit",
-    "release": "node --no-warnings publish.mjs"
+    "release": "node --no-warnings publish.mjs",
+    "pre-release": "bun run build && bun run type-check && bun run lint && bun run format:write"
   },
   "peerDependencies": {
     "react": "^18.0.0",
